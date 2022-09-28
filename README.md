@@ -1,2 +1,2 @@
-# Uebung3
+# PrakInfoGrp
 Übung3
