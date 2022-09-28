@@ -1,0 +1,73 @@
+package Übung2;
+
+public class Variables {
+
+	//1a)
+	
+	public static void weird() {
+			int a = 0xC0DE;			//49374
+			int b = 01337;			//735
+			int c = 0b10101010;		//170
+			int d = 0b1001_0110;	//150
+			int e = c*8;			//1360
+			int f = c<<3;			//1360
+			int g = d / 0x10;		//9
+			int h = d>>4;			//9
+			
+			System.out.println(a);
+			System.out.println(b);
+			System.out.println(c);
+			System.out.println(d);
+			System.out.println(e);
+			System.out.println(f);
+			System.out.println(g);
+			System.out.println(h);
+		}	
+	
+	//1b)
+	
+	public static void someBool(boolean x, boolean y, boolean z) {
+		
+		System.out.println(!(x||y)&&((x&&!y)||(!x&&y))||(!z&&y)||(x&&y&&z)); //1.
+		System.out.println((x||!y)&&(y&&!z)||(!x&&z)); //2.
+		}
+	
+	
+	//1c)
+	
+	public static void typeSpecifics() {
+		byte aByte = 64, bByte = 96;
+		short aShort, bShort = aShort = 0b0111_1111_1111_1000;
+		int anInt, bnInt;
+		long aLong, bLong;
+		
+		aByte += bByte;
+		aShort += bShort + 64;
+		
+		anInt = 64 + bByte;
+		bnInt = 2*bShort + 64;
+		
+		// aByte = aByte + bByte;
+		// aShort = aShort + bShort;
+		aLong = anInt + bnInt;
+		bLong = 0x7FFF_FFFF_FFFF_FFD0l + bByte;
+		
+		System.out.println(aByte + bByte);
+	
+	
+		}
+	
+	
+	
+	
+	public static void main(String[] args) {
+			
+		weird();						//1a
+		someBool(true, true, true);		//1b
+			
+	typeSpecifics();
+	
+		}	
+					
+		
+	}
